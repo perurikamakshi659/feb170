@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, k, i, evensum = 0, oddsum = 0;
+    
+    // take user input for n and k
+    printf("Enter two integers (n and k): ");
+    scanf("%d %d", &n, &k);
+    
+    // loop through all numbers from 1 to n
+    for (i = 1; i <= n; i++) {
+        if (i % k == 0) {
+            printf("%d ", i);
+            if (i % 2 == 0) {
+                evensum += i;
+            } else {
+                oddsum += i;
+            }
+        }
+    }
+    
+    printf("\nEven sum: %d\nOdd sum: %d", evensum, oddsum);
+    return 0;
+}
